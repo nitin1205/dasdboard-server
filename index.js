@@ -18,7 +18,8 @@ import salesRoutes from './routes/sales.js';
 // import ProductStat from './models/ProductStat.js';
 // import { dataProduct, dataProductStat } from './data/index.js';
 // import Transaction from './models/Transactions.js';
-// import { dataTransaction } from './data/index.js';
+// import { dataTransaction, dataOverallStat } from './data/index.js';
+// import OverallStat from './models/OverallStat.js';
 
 dotenv.config();
 const app = express();
@@ -49,6 +50,8 @@ mongoose.connect(process.env.MONGO_URL, {
     // Product.insertMany(dataProduct);
     // ProductStat.insertMany(dataProductStat);
     // Transaction.insertMany(dataTransaction);
+    // OverallStat.insertMany(dataOverallStat);
+    // console.log(OverallStat);
 }).catch((error) => {
     `${error} did not connect.`
 });
